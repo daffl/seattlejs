@@ -585,6 +585,7 @@ pre {
 
 .slide.dark-grey .slide-content {
   background-color: rgba(33, 38, 40, 0.8);
+  color: white;
 }
 
 ul {
@@ -624,65 +625,51 @@ h6 {
     <div class="progress-bar"></div>
   </div>
 
-  <div class="slide  centered hero" id="slide-1">
+  <div class="slide  centered" id="slide-1">
     <section class="slide-content"><p><img src="img/donejs-logo-white.svg" style="width: 80%; margin-top: 3em;" alt="Donejs"></p>
-<h1 id="vanjs-january-18-2016">VanJS, January 18, 2016</h1>
 </section>
   </div>
-  <div class="slide hidden  color dark-grey hero centered" id="slide-2">
-    <section class="slide-content"><div style="margin-top:3em">
-<h1>Performance</h1>
-<h1>Maintainability</h1>
-<h1>Usability</h1>
-</div></section>
+  <div class="slide hidden  centered" id="slide-2">
+    <section class="slide-content"><h2 id="some-history">Some history</h2>
+<p><img src="img/framework-timeline.png" style="width: 70%;" alt="Framework Timeline"></p>
+</section>
   </div>
-  <div class="slide hidden  color light-grey hero" id="slide-3">
-    <section class="slide-content"><h2 id="-small-better-small-performance"><small>Better</small> Performance</h2>
-<ul>
-<li><em>Server Side Rendered (Isomorphic)</em></li>
-<li>Progressive Loading</li>
-<li>Minimal Data Requests</li>
-<li>Minimal DOM Updates</li>
-<li>Worker Thread Rendering</li>
-<li>Deploy to a CDN</li>
-</ul>
+  <div class="slide hidden  centered" id="slide-3">
+    <section class="slide-content"><h1 id="building-javascript-applications">Building JavaScript applications</h1>
 </section>
   </div>
   <div class="slide hidden  color blue hero" id="slide-4">
-    <section class="slide-content"><h2 id="-small-more-small-maintainable"><small>More</small> Maintainable</h2>
+    <section class="slide-content"><h2 id="maintainability">Maintainability</h2>
 <ul>
-<li>Comprehensive Testing</li>
+<li><em>Dependency and package management</em></li>
+<li><em>Modern language features (ES6, JSX)</em></li>
+<li><em>Application architecture</em></li>
+<li><em>Development flow</em></li>
+<li>Automated testing</li>
+<li>Continuous integration</li>
+<li>Avoid boilerplate</li>
 <li>Documentation</li>
-<li>Continuous Integration &amp; Deployment</li>
-<li><em>NPM Packages</em></li>
-<li>ES6 Modules</li>
-<li>Modlets</li>
-<li>Custom HTML Elements</li>
-<li>MVVM Architecture</li>
-<li><em>Hot Module Swapping</em></li>
-<li>Generators</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden  color dark-grey hero" id="slide-5">
-    <section class="slide-content"><h2 id="-small-improved-app-small-usability"><small>Improved App</small> Usability</h2>
+  <div class="slide hidden  color light-grey hero" id="slide-5">
+    <section class="slide-content"><h2 id="performance-and-usability">Performance and usability</h2>
 <ul>
+<li><em>Server Side Rendering</em></li>
+<li>CDN deploy</li>
+<li>Progressive Loading</li>
+<li>Minimal Data Requests</li>
+<li>Minimal DOM Updates</li>
 <li><em>Real Time</em></li>
-<li>Two-way Routing</li>
-<li>IE8+</li>
 <li><em>iOS, Android</em></li>
 <li><em>Desktop</em></li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden  centered" id="slide-6">
-    <section class="slide-content"><h2 id="with-a-history">With a History</h2>
-<p><img src="img/framework-timeline.png" style="width: 70%;" alt="Framework Timeline"></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><ul>
-<li>Open Source JavaScript framework (MIT)</li>
+  <div class="slide hidden  dark-grey hero" id="slide-6">
+    <section class="slide-content"><h2 id="so-what-is-donejs-">So what is DoneJS?</h2>
+<ul>
+<li>Open Source (MIT) JavaScript application stack</li>
 <li>Backend services agnostic</li>
 <li>Windows, Linux, OSX</li>
 <li>Comes with<ul>
@@ -699,17 +686,39 @@ h6 {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
+  <div class="slide hidden" id="slide-7">
     <section class="slide-content"><h2 id="getting-started">Getting Started</h2>
 <p><img src="img/donejs-init.png" style="float: right; margin-right: 5em; width: 35%;" alt="donejs init" /></p>
 <blockquote>
 <p>npm install donejs -g</p>
-<p>donejs init donejs-chat</p>
+<p>donejs add app donejs-chat</p>
 </blockquote>
 </section>
   </div>
+  <div class="slide hidden  color blue hero" id="slide-8">
+    <section class="slide-content"><h2 id="maintainability">Maintainability</h2>
+<ul>
+<li>Dependency and package management<ul>
+<li>npm packages</li>
+<li>ES6 imports</li>
+</ul>
+</li>
+<li>Modern language features (ES6, JSX)</li>
+<li>Development flow<ul>
+<li>Hot-module swapping (live-reload)</li>
+</ul>
+</li>
+<li>Application architecture<ul>
+<li>Components</li>
+<li>Modlets</li>
+<li>State-based routing</li>
+</ul>
+</li>
+</ul>
+</section>
+  </div>
   <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><h2 id="npm-and-hot-module-swapping">NPM and Hot-Module Swapping</h2>
+    <section class="slide-content"><h2 id="dependency-and-package-management">Dependency and package management</h2>
 <blockquote>
 <p>npm install bootstrap --save</p>
 </blockquote>
@@ -730,12 +739,89 @@ h6 {
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden  centered" id="slide-10">
+  <div class="slide hidden" id="slide-10">
+    <section class="slide-content"><h2 id="components">Components</h2>
+<blockquote>
+<p>donejs add component home.component chat-home</p>
+</blockquote>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">can-component</span> <span class="hljs-attr">tag</span>=<span class="hljs-string">"chat-home"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"less"</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">display</span>: <span class="hljs-selector-tag">block</span>;
+    <span class="hljs-selector-tag">h1</span><span class="hljs-selector-class">.page-header</span> { <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>; }
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"page-header text-center"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://donejs.com/static/img/donejs-logo-white.svg"</span>
+           <span class="hljs-attr">alt</span>=<span class="hljs-string">"DoneJS logo"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%;"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>Chat
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{routeUrl page='chat' }}"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary btn-block btn-lg"</span>&gt;</span>
+      Start chat
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">can-component</span>&gt;</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-11">
+    <section class="slide-content"><h2 id="routing">Routing</h2>
+<blockquote>
+<p>donejs add component messages chat-messages</p>
+</blockquote>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- messages/messages.stache --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{routeUrl page='home'}}"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+<p>Then in <code>app.js</code>:</p>
+<pre><code class="lang-javascript">route(<span class="hljs-string">'/:page'</span>, { page: <span class="hljs-string">'home'</span> });</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-12">
+    <section class="slide-content"><h2 id="switching-between-pages">Switching between pages</h2>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- index.stache --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-8 col-sm-offset-2"</span>&gt;</span>
+      {{#eq page 'chat'}}
+        <span class="hljs-tag">&lt;<span class="hljs-name">can-import</span> <span class="hljs-attr">from</span>=<span class="hljs-string">"donejs-chat/messages/"</span>&gt;</span>
+          {{#if isPending}}Loading...{{else}}<span class="hljs-tag">&lt;<span class="hljs-name">chat-messages</span>/&gt;</span>{{/if}}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">can-import</span>&gt;</span>
+      {{else}}
+        <span class="hljs-tag">&lt;<span class="hljs-name">can-import</span> <span class="hljs-attr">from</span>=<span class="hljs-string">"donejs-chat/home.component!"</span>&gt;</span>
+          {{#if isPending}}Loading...{{else}}<span class="hljs-tag">&lt;<span class="hljs-name">chat-home</span>/&gt;</span>{{/if}}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">can-import</span>&gt;</span>
+      {{/eq}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden  color light-grey hero" id="slide-13">
+    <section class="slide-content"><h2 id="performance-and-usability">Performance and usability</h2>
+<ul>
+<li>Server Side Rendering</li>
+<li>Production builds</li>
+<li>Progressive Loading</li>
+<li>Real Time<ul>
+<li>Socket.io push updates</li>
+</ul>
+</li>
+<li>iOS, Android<ul>
+<li>Cordova</li>
+</ul>
+</li>
+<li>Desktop<ul>
+<li>NW.js</li>
+</ul>
+</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden  centered" id="slide-14">
     <section class="slide-content"><h2 id="server-side-rendering">Server Side Rendering</h2>
 <p><img src="img/ssr.png" style="width: 80%;" alt="donejs init" /></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h2 id="real-time">Real-time</h2>
 <blockquote>
 <p>npm install steal-socket.io --save</p>
@@ -752,7 +838,7 @@ socket.on(<span class="hljs-string">'messages removed'</span>,
   message =&gt; messageConnection.destroyInstance(message));</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h2 id="desktop-and-mobile-builds">Desktop and Mobile Builds</h2>
 <p><img src="img/desktop-mobile.gif" style="float: right; margin-top: 1em;margin-right: 5em; width: 45%;" alt="donejs init" /></p>
 <h4 id="ios-android-cordova-">iOS/Android (Cordova)</h4>
@@ -767,78 +853,14 @@ socket.on(<span class="hljs-string">'messages removed'</span>,
 </blockquote>
 </section>
   </div>
-  <div class="slide hidden  centered" id="slide-13">
-    <section class="slide-content"><h2 id="why-is-history-important-">Why is History Important?</h2>
-<p><img src="img/release-history.jpg" style="width: 70%;" alt="Release History"></p>
-<p><small>Source: <em><a href="http://blog.bitovi.com/longevity-or-lack-thereof-in-javascript-frameworks/">Longevity (or Lack Thereof) in JavaScript Frameworks</a></em></small></p>
-</section>
-  </div>
-  <div class="slide hidden  hero color blue wide-list" id="slide-14">
-    <section class="slide-content"><h2 id="how-do-we-do-it-">How Do We Do It?</h2>
+  <div class="slide hidden  presenter" id="slide-17">
+    <section class="slide-content"><p><img src="http://gravatar.com/avatar/a14850281f19396480bdba4aab2d52ef?s=200" alt="David Luecke"></p>
+<h2 id="david-luecke">David Luecke</h2>
 <ul>
-<li>It&#39;s our business model<ul>
-<li>Building amazing applications for our clients<br> using our tools!</li>
-</ul>
-</li>
-<li>Enterprise Clients<ul>
-<li>Want long term stability and reliability</li>
-</ul>
-</li>
-<li>Hard work and persistence</li>
+<li><a href="https://github.com/daffl"><i class="fa fa-github"></i> daffl</a></li>
+<li><a href="http://twitter.com/daffl"><i class="fa fa-twitter"></i> @daffl</a></li>
 </ul>
 </section>
-  </div>
-  <div class="slide hidden  hero color dark-grey wide-list" id="slide-15">
-    <section class="slide-content"><h2 id="real-talk-its-not-been-easy">Real Talk: Its Not Been Easy</h2>
-<ul>
-<li>Documentation is hard<ul>
-<li>Empathizing with our users has been a weak point</li>
-<li>Explaining <em>why</em> not just <em>how</em></li>
-</ul>
-</li>
-<li>Being old and cool is hard<ul>
-<li>We don&#39;t look <em>cool</em></li>
-<li>We have a small team and small budget for marketing</li>
-</ul>
-</li>
-<li>We have to market to our clients, which is different than marketing to developers</li>
-</ul>
-</section>
-  </div>
-  <div class="slide hidden  hero color blue wide-list" id="slide-16">
-    <section class="slide-content"><h2 id="rallying-the-js-community">Rallying the JS Community</h2>
-<ul>
-<li>Selling the whole pie is harder than just a slice</li>
-<li>Getting the attention of passionate early adopters is essential</li>
-</ul>
-</section>
-  </div>
-  <div class="slide hidden  presenter hero color dark-grey wide-list" id="slide-17">
-    <section class="slide-content"><h2 id="the-end-">The End.</h2>
-<div>
-<div class="bio">
-
-<img src="http://gravatar.com/avatar/51d3dd361a66507e9f4e8232e69b7d99?s=200" alt="Julia Allyce">
-
-<h2>Julia Allyce</h2>
-<ul>
-  <li><a href="https://github.com/julia-allyce"><i class="fa fa-github"></i> julia-allyce</a></li>
-  <li><a href="http://twitter.com/julia_allyce"><i class="fa fa-twitter"></i> @julia_allyce</a></li>
-</ul>
-</div>
-
-<div class="bio">
-<img src="http://gravatar.com/avatar/a14850281f19396480bdba4aab2d52ef?s=200" alt="David Luecke">
-
-<h2>David Luecke</h2>
-<ul>
-  <li><a href="https://github.com/daffl"><i class="fa fa-github"></i> daffl</a></li>
-  <li><a href="http://twitter.com/daffl"><i class="fa fa-twitter"></i> @daffl</a></li>
-</ul>
-</div>
-</div>
-
-<h2 style="margin-top: 1em;"><a href="http://julia-allyce.github.io/vanjs-donejs/"><a href="http://julia-allyce.github.io/vanjs-donejs/">http://julia-allyce.github.io/vanjs-donejs/</a></a></h2></section>
   </div>
 
 

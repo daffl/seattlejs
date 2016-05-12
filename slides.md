@@ -5,65 +5,51 @@ controls: false
 logo: theme/logo.png
 style: style.css
 
--- centered hero
+-- centered
 
 <img src="img/donejs-logo-white.svg" style="width: 80%; margin-top: 3em;" alt="Donejs">
 
-# VanJS, January 18, 2016
-
--- color dark-grey hero centered
-<div style="margin-top:3em">
-<h1>Performance</h1>
-<h1>Maintainability</h1>
-<h1>Usability</h1>
-</div>
-
--- color light-grey hero
-
-## <small>Better</small> Performance
-
-- _Server Side Rendered (Isomorphic)_
-- Progressive Loading
-- Minimal Data Requests
-- Minimal DOM Updates
-- Worker Thread Rendering
-- Deploy to a CDN
-
--- color blue hero
-
-## <small>More</small> Maintainable
-
-- Comprehensive Testing
-- Documentation
-- Continuous Integration & Deployment
-- _NPM Packages_
-- ES6 Modules
-- Modlets
-- Custom HTML Elements
-- MVVM Architecture
-- _Hot Module Swapping_
-- Generators
-
--- color dark-grey hero
-
-## <small>Improved App</small> Usability
-
-- _Real Time_
-- Two-way Routing
-- IE8+
-- _iOS, Android_
-- _Desktop_
-
-
 -- centered
 
-## With a History
+## Some history
 
 <img src="img/framework-timeline.png" style="width: 70%;" alt="Framework Timeline">
 
---
+-- centered
 
-- Open Source JavaScript framework (MIT)
+# Building JavaScript applications
+
+-- color blue hero
+
+## Maintainability
+
+- _Dependency and package management_
+- _Modern language features (ES6, JSX)_
+- _Application architecture_
+- _Development flow_
+- Automated testing
+- Continuous integration
+- Avoid boilerplate
+- Documentation
+
+-- color light-grey hero
+
+## Performance and usability
+
+- _Server Side Rendering_
+- CDN deploy
+- Progressive Loading
+- Minimal Data Requests
+- Minimal DOM Updates
+- _Real Time_
+- _iOS, Android_
+- _Desktop_
+
+-- dark-grey hero
+
+## So what is DoneJS?
+
+- Open Source (MIT) JavaScript application stack
 - Backend services agnostic
 - Windows, Linux, OSX
 - Comes with
@@ -84,11 +70,26 @@ style: style.css
 
 > npm install donejs -g
 
-> donejs init donejs-chat
+> donejs add app donejs-chat
+
+-- color blue hero
+
+## Maintainability
+
+- Dependency and package management
+  - npm packages
+  - ES6 imports
+- Modern language features (ES6, JSX)
+- Development flow
+  - Hot-module swapping (live-reload)
+- Application architecture
+  - Components
+  - Modlets
+  - State-based routing
 
 --
 
-## NPM and Hot-Module Swapping
+## Dependency and package management
 
 > npm install bootstrap --save
 
@@ -109,6 +110,87 @@ style: style.css
   </div>
 </div>
 ```
+
+--
+
+## Components
+
+> donejs add component home.component chat-home
+
+```html
+<can-component tag="chat-home">
+  <style type="less">
+    display: block;
+    h1.page-header { margin-top: 0; }
+  </style>
+  <template>
+    <h1 class="page-header text-center">
+      <img src="http://donejs.com/static/img/donejs-logo-white.svg"
+           alt="DoneJS logo" style="width: 100%;" />
+      <br>Chat
+    </h1>
+
+    <a href="{{routeUrl page='chat' }}" class="btn btn-primary btn-block btn-lg">
+      Start chat
+    </a>
+  </template>
+</can-component>
+```
+
+--
+
+## Routing
+
+> donejs add component messages chat-messages
+
+```html
+<!-- messages/messages.stache -->
+<h5><a href="{{routeUrl page='home'}}">Home</a></h5>
+<p>{{message}}</p>
+```
+
+Then in `app.js`:
+
+```javascript
+route('/:page', { page: 'home' });
+```
+
+--
+
+## Switching between pages
+
+```html
+<!-- index.stache -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      {{#eq page 'chat'}}
+        <can-import from="donejs-chat/messages/">
+          {{#if isPending}}Loading...{{else}}<chat-messages/>{{/if}}
+        </can-import>
+      {{else}}
+        <can-import from="donejs-chat/home.component!">
+          {{#if isPending}}Loading...{{else}}<chat-home/>{{/if}}
+        </can-import>
+      {{/eq}}
+    </div>
+  </div>
+</div>
+```
+
+-- color light-grey hero
+
+## Performance and usability
+
+- Server Side Rendering
+- Production builds
+- Progressive Loading
+- Real Time
+  - Socket.io push updates
+- iOS, Android
+  - Cordova
+- Desktop
+  - NW.js
 
 -- centered
 
@@ -153,68 +235,11 @@ socket.on('messages removed',
 
 > donejs build nw
 
--- centered
+-- presenter
 
-## Why is History Important?
-
-<img src="img/release-history.jpg" style="width: 70%;" alt="Release History">
-
-<small>Source: <em>[Longevity (or Lack Thereof) in JavaScript Frameworks](http://blog.bitovi.com/longevity-or-lack-thereof-in-javascript-frameworks/)</em></small>
-
--- hero color blue wide-list
-
-## How Do We Do It?
-
-- It's our business model
- - Building amazing applications for our clients<br> using our tools!
-- Enterprise Clients
- - Want long term stability and reliability
-- Hard work and persistence
-
-
--- hero color dark-grey wide-list
-
-## Real Talk: Its Not Been Easy
-
-- Documentation is hard
- - Empathizing with our users has been a weak point
- - Explaining _why_ not just _how_
-- Being old and cool is hard
- - We don't look _cool_
- - We have a small team and small budget for marketing
-- We have to market to our clients, which is different than marketing to developers
-
--- hero color blue wide-list
-
-## Rallying the JS Community
-
-- Selling the whole pie is harder than just a slice
-- Getting the attention of passionate early adopters is essential
-
-
--- presenter hero color dark-grey wide-list
-## The End.
-<div>
-<div class="bio">
-
-![Julia Allyce](http://gravatar.com/avatar/51d3dd361a66507e9f4e8232e69b7d99?s=200)
-
-<h2>Julia Allyce</h2>
-<ul>
-  <li>[<i class="fa fa-github"></i> julia-allyce](https://github.com/julia-allyce)</li>
-  <li>[<i class="fa fa-twitter"></i> @julia_allyce](http://twitter.com/julia_allyce)</li>
-</ul>
-</div>
-
-<div class="bio">
 ![David Luecke](http://gravatar.com/avatar/a14850281f19396480bdba4aab2d52ef?s=200)
 
-<h2>David Luecke</h2>
-<ul>
-  <li>[<i class="fa fa-github"></i> daffl](https://github.com/daffl)</li>
-  <li>[<i class="fa fa-twitter"></i> @daffl](http://twitter.com/daffl)</li>
-</ul>
-</div>
-</div>
+## David Luecke
 
-<h2 style="margin-top: 1em;">[http://julia-allyce.github.io/vanjs-donejs/](http://julia-allyce.github.io/vanjs-donejs/)</h2>
+* [<i class="fa fa-github"></i> daffl](https://github.com/daffl)
+* [<i class="fa fa-twitter"></i> @daffl](http://twitter.com/daffl)

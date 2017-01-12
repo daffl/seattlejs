@@ -593,6 +593,11 @@ pre {
   height: 100px;
 }
 
+.frontpage h1 {
+  font-size: 2.5em;
+  color: #3B83A3;
+}
+
 ul {
   list-style: square;
 }
@@ -630,8 +635,9 @@ h6 {
     <div class="progress-bar"></div>
   </div>
 
-  <div class="slide  centered" id="slide-1">
+  <div class="slide  centered frontpage" id="slide-1">
     <section class="slide-content"><h1 id="a-brief-history-of-single-page-applications">A brief history of Single Page Applications</h1>
+<p><a href="https://bitovi.com"><img src="img/bitovi.png" style="margin-top: 40px; width: 40%"></a></p>
 </section>
   </div>
   <div class="slide hidden  centered" id="slide-2">
@@ -672,7 +678,7 @@ h6 {
 <li>The good and bad of owning the stack</li>
 <li>Long-term backwards compatibility is hard</li>
 <li>Evolving frameworks eventually turn into a collection of libraries</li>
-<li>Old ideas don&#39;t die<ul>
+<li>Old ideas are here to stay<ul>
 <li>Functional Programming (LISP, 1960s) -&gt; React, RxJS, ImmutableJS</li>
 <li>SGML (ISO, 1986) -&gt; HTML5</li>
 <li>Flash MXML (Adobe, 2000) -&gt; Angular, Vue.js</li>
@@ -689,10 +695,8 @@ h6 {
 <li>The number of steps required for success is too complex for memory</li>
 <li>Learn from other&#39;s experience</li>
 <li>Force yourself to remember the &quot;not so fun&quot; stuff</li>
-<li><p>Guide awkward but important conversations</p>
-</li>
-<li><p><a href="http://bitovi.github.io/checklist/">bitovi.github.io/checklist</a></p>
-</li>
+<li>Guide awkward but important conversations</li>
+<li><a href="http://bitovi.github.io/checklist/">bitovi.github.io/checklist</a></li>
 </ul>
 </section>
   </div>
@@ -729,15 +733,21 @@ h6 {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
-    <section class="slide-content"><h1 id="best-practises">Best practises</h1>
+  <div class="slide hidden  color blue hero" id="slide-11">
+    <section class="slide-content"><h2 id="down-in-the-code">Down in the code</h2>
+<ul>
+<li>Modlets</li>
+<li>State based routing</li>
+<li>Functional testing</li>
+<li>Model layer</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden  centered" id="slide-12">
     <section class="slide-content"><h2 id="modlets">Modlets</h2>
 <h1 style="height: 85%; vertical-align: center;">
   <img src="img/folders.png" alt="Folders" style="display: inline-block; height: 100%;" />
-  VS
+  <span style="display: inline-block; height: 100%;">VS</span>
   <img src="img/modlets.png" alt="Modlets" style="display: inline-block; height: 100%;" />
 </h1></section>
   </div>
@@ -779,12 +789,32 @@ route.url({ page: <span class="hljs-string">'user'</span>, section: <span class=
 <p>Automate it with any test QUnit, Jasmine or Mocha test runner (<a href="http://funcunit.com/site/examples/todo_qunit.html">example page</a>).</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden  centered" id="slide-16">
     <section class="slide-content"><h2 id="two-more-things">Two more things</h2>
+<p><a href="http://feathersjs.com"><img style="width: 60%; margin: 40px 0;" src="img/feathers.png" alt="FeathersJS"></a></p>
+<p><a href="https://github.com/mysamai/mysam"><img style="width: 60%;" src="img/mysam.png" alt="MySam"></a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h2 id="services">Services</h2>
+<blockquote>
+<p>A unified, protocol independent interface for accessing resources</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">'feathers'</span>);
+<span class="hljs-keyword">const</span> app = feathers();
+
+<span class="hljs-keyword">const</span> myService = {
+  find(params) {},
+  get(id, params) {},
+  create(data, params) {},
+  update(id, data, params) {},
+  patch(id, data, params) {},
+  remove(id, params) {},
+  setup(app, path) {}
+}
+
+<span class="hljs-comment">// Use it in your application at the `/todos` endpoint</span>
+app.use(<span class="hljs-string">'/todos'</span>, myService);</code></pre>
 </section>
   </div>
   <div class="slide hidden  presenter" id="slide-18">

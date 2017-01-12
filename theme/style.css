@@ -234,6 +234,11 @@ pre {
   height: 100px;
 }
 
+.frontpage h1 {
+  font-size: 2.5em;
+  color: #3B83A3;
+}
+
 ul {
   list-style: square;
 }

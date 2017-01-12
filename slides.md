@@ -5,9 +5,11 @@ controls: false
 logo: theme/logo.png
 style: style.css
 
--- centered
+-- centered frontpage
 
 # A brief history of Single Page Applications
+
+<a href="https://bitovi.com"><img src="img/bitovi.png" style="margin-top: 40px; width: 40%"></a>
 
 -- centered
 
@@ -56,7 +58,7 @@ Widget libraries:
 - The good and bad of owning the stack
 - Long-term backwards compatibility is hard
 - Evolving frameworks eventually turn into a collection of libraries
-- Old ideas don't die
+- Old ideas are here to stay
   - Functional Programming (LISP, 1960s) -> React, RxJS, ImmutableJS
   - SGML (ISO, 1986) -> HTML5
   - Flash MXML (Adobe, 2000) -> Angular, Vue.js
@@ -72,7 +74,6 @@ A checklist of things we found help guide the development of a JavaScript softwa
 - Learn from other's experience
 - Force yourself to remember the "not so fun" stuff
 - Guide awkward but important conversations
-
 - [bitovi.github.io/checklist](http://bitovi.github.io/checklist/)
 
 -- dark-grey hero centered
@@ -106,9 +107,14 @@ After filling out the checklist in hindsight for all of our previous projects, w
   * yearly trainings
   * release < 6 months
 
---
+-- color blue hero
 
-# Best practises
+## Down in the code
+
+- Modlets
+- State based routing
+- Functional testing
+- Model layer
 
 -- centered
 
@@ -116,7 +122,7 @@ After filling out the checklist in hindsight for all of our previous projects, w
 
 <h1 style="height: 85%; vertical-align: center;">
   <img src="img/folders.png" alt="Folders" style="display: inline-block; height: 100%;" />
-  VS
+  <span style="display: inline-block; height: 100%;">VS</span>
   <img src="img/modlets.png" alt="Modlets" style="display: inline-block; height: 100%;" />
 </h1>
 
@@ -167,13 +173,37 @@ test('TodoMVC app', function() {
 
 Automate it with any test QUnit, Jasmine or Mocha test runner ([example page](http://funcunit.com/site/examples/todo_qunit.html)).
 
---
+-- centered
 
 ## Two more things
+
+<a href="http://feathersjs.com"><img style="width: 60%; margin: 40px 0;" src="img/feathers.png" alt="FeathersJS"></a>
+
+<a href="https://github.com/mysamai/mysam"><img style="width: 60%;" src="img/mysam.png" alt="MySam"></a>
 
 --
 
 ## Services
+
+> A unified, protocol independent interface for accessing resources
+
+```javascript
+const feathers = require('feathers');
+const app = feathers();
+
+const myService = {
+  find(params) {},
+  get(id, params) {},
+  create(data, params) {},
+  update(id, data, params) {},
+  patch(id, data, params) {},
+  remove(id, params) {},
+  setup(app, path) {}
+}
+
+// Use it in your application at the `/todos` endpoint
+app.use('/todos', myService);
+```
 
 -- presenter
 

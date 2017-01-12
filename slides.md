@@ -1,4 +1,4 @@
-title: DoneJS - Your app. Done.
+title: A brief history of Single Page Applications
 output: index.html
 theme: theme
 controls: false
@@ -7,233 +7,127 @@ style: style.css
 
 -- centered
 
-<img src="img/donejs-logo-white.svg" style="width: 80%; margin-top: 3em;" alt="Donejs">
+# A brief history of Single Page Applications
 
 -- centered
 
-## Some history
+## 2006: jQuery - New Wave JavaScript
+
+### Used today by ~80% of the top million websites
+
+<a href="http://web.archive.org/web/20090214090118/http://digg.com/programming/jQuery_-_New_Wave_Javascript"><img src="img/digg-comments.png" style="width: 70%;" alt="Framework Timeline"></a>
+
+-- centered
+
+## 2000 - 2007: "Web 2.0"
+
+JavaScript helper libraries:
+
+<a href="http://mootools.net/"><img alt="Mootools logo" src="img/mootools.png" style="height: 100px;"></a> <a href="http://prototypejs.org/"><img alt="PrototypeJS logo" src="img/prototype.jpg" style="height: 100px;"></a> <a href="https://script.aculo.us/"><img alt="script.aculo.us logo" src="img/scriptaculous.png" style="height: 100px;"></a>
+
+Widget libraries:
+
+<a href="http://yuilibrary.com/"><img alt="YUI logo" src="img/yui.png" style="height: 100px;"></a> <a href="https://www.sencha.com/products/extjs/"><img alt="ExtJS logo" src="img/extjs.jpg" style="height: 100px;"></a> <a href="https://dojotoolkit.org/"><img alt="Dojo toolkit logo" src="img/dojo.png" style="height: 100px;"></a>
+
+-- centered
+
+## 2007 - Now: JavaScript application frameworks
 
 <img src="img/framework-timeline.png" style="width: 70%;" alt="Framework Timeline">
 
 -- centered
 
-# Building JavaScript applications
-
--- color blue hero
-
-## Maintainability
-
-- _Dependency and package management_
-- _Modern language features (ES6, JSX)_
-- _Application architecture_
-- _Development flow_
-- Automated testing
-- Continuous integration
-- Avoid boilerplate
-- Documentation
-
--- color light-grey hero
-
-## Performance and usability
-
-- _Server Side Rendering_
-- CDN deploy
-- Progressive Loading
-- Minimal Data Requests
-- Minimal DOM Updates
-- _Real Time_
-- _iOS, Android_
-- _Desktop_
-
--- dark-grey hero
-
-## So what is DoneJS?
-
-- Open Source (MIT) JavaScript application stack
-- Backend services agnostic
-- Windows, Linux, OSX
-- Comes with
-  - [StealJS](http://stealjs.com) - ES6, CJS, and AMD module loader and builder
-  - [CanJS](http://canjs.com) - Custom elements and Model-View-ViewModel utilities
-  - [jQuery](http://jquery.com) - DOM helpers
-  - [FuncUnit](http://funcunit.com) - Functional tests
-  - [Testee](https://github.com/bitovi/testee) - QUnit, Mocha and Jasmine Test runner
-  - [DocumentJS](http://documentjs.com) - Documentation
-  - [can-ssr](http://github.com/canjs/ssr) - Server-Side Rendering Utilities for CanJS
-  - [can-connect](https://github.com/canjs/can-connect) - Assemble real-time, high performance, restful data connections.
+# What did we learn?
 
 --
 
-## Getting Started
+## A JavaScript project checklist
 
-<img src="img/donejs-init.png" style="float: right; margin-right: 5em; width: 35%;" alt="donejs init" />
+## [http://blog.bitovi.com/why-checklist/](http://blog.bitovi.com/why-checklist/)
 
-> npm install donejs -g
+* Development
 
-> donejs add app donejs-chat
+* Design
 
--- color blue hero
+* Managment
 
-## Maintainability
-
-- Dependency and package management
-  - npm packages
-  - ES6 imports
-- Modern language features (ES6, JSX)
-- Development flow
-  - Hot-module swapping (live-reload)
-- Application architecture
-  - Components
-  - Modlets
-  - State-based routing
+### [To the checklist!](http://bitovi.github.io/checklist/)
 
 --
 
-## Dependency and package management
-
-> npm install bootstrap --save
-
-```html
-<can-import from="bootstrap/less/bootstrap.less!" />
-<can-import from="donejs-chat/styles.less!" />
-<can-import from="donejs-chat/app" export-as="viewModel" />
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <h1 class="page-header text-center">
-        <img src="http://donejs.com/static/img/donejs-logo-white.svg"
-          alt="DoneJS logo" style="width: 100%;" />
-        <br>Chat
-      </h1>
-    </div>
-  </div>
-</div>
-```
+## The major surprise in our data was that development factors are not nearly as meaningful in predicting success as design and management factors.
 
 --
 
-## Components
+# A Bitovi Case Study
 
-> donejs add component home.component chat-home
+After filling out the checklist in hindsight for all of our previous projects, we calculated influence factors and recorded the correlation to project success for each category.
 
-```html
-<can-component tag="chat-home">
-  <style type="less">
-    display: block;
-    h1.page-header { margin-top: 0; }
-  </style>
-  <template>
-    <h1 class="page-header text-center">
-      <img src="http://donejs.com/static/img/donejs-logo-white.svg"
-           alt="DoneJS logo" style="width: 100%;" />
-      <br>Chat
-    </h1>
-
-    <a href="{{routeUrl page='chat' }}" class="btn btn-primary btn-block btn-lg">
-      Start chat
-    </a>
-  </template>
-</can-component>
-```
+__We defined success as on time and budget__
 
 --
 
-## Routing
+* Development __.20 ~ .28__
+  * code reviews
+  * documentation
+* Design __.44 ~ .45__
+  * user testing
+  * design documentation
+* Management __.45 ~ .48__
+  * vision, goals and strategy
+  * release < 6 months
 
-> donejs add component messages chat-messages
+--
 
-```html
-<!-- messages/messages.stache -->
-<h5><a href="{{routeUrl page='home'}}">Home</a></h5>
-<p>{{message}}</p>
-```
+## Old ideas don't die
 
-Then in `app.js`:
+- Functional Programming (LISP, 1960s) -> React, RxJS, ImmutableJS
+- SGML (ISO, 1986) -> HTML5
+- Flash MXML (Adobe, 2000) -> Angular, Vue.js
+- GWT (Google, 2006) -> TypeScript
+- EJS (JavaScriptMVC, 2007) -> JSX
+
+--
+
+# Design patterns > Frameworks
+
+--
+
+## Modlets
+
+--
+
+## Models
+
+--
+
+# User Testing w/ [FuncUnit](http://funcunit.com)
+
+<img src="img/funcunit.png"/>
+
+--
+
+# __FuncUnit__
+
+Functional testing library built on top of __jQuery__ and runs on __QUnit__, __Jasmine__ or __Mocha__:
+
+- Write functional tests in your testing library of choice
+- Use jQuery syntax to emulate user input
+
+--
+
+# __Testing a [TodoMVC](http://todomvc.com) app__
 
 ```javascript
-route('/:page', { page: 'home' });
+test('TodoMVC app', function() {
+  F('#new-todo').click().type('Do some nerdy stuff\r');
+  F('#todo-list li').size(1, 'Got one Todo');
+  F('#todo-list li:first label')
+    .html('Do some nerdy stuff', 'Todo has correct text');
+  F('#todo-count').html(/<strong>1<\/strong>(.*)item(.*)left/,
+    'Todo count text is correct');
+});
 ```
-
---
-
-## Switching between pages
-
-```html
-<!-- index.stache -->
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      {{#eq page 'chat'}}
-        <can-import from="donejs-chat/messages/">
-          {{#if isPending}}Loading...{{else}}<chat-messages/>{{/if}}
-        </can-import>
-      {{else}}
-        <can-import from="donejs-chat/home.component!">
-          {{#if isPending}}Loading...{{else}}<chat-home/>{{/if}}
-        </can-import>
-      {{/eq}}
-    </div>
-  </div>
-</div>
-```
-
--- color light-grey hero
-
-## Performance and usability
-
-- Server Side Rendering
-- Production builds
-- Progressive Loading
-- Real Time
-  - Socket.io push updates
-- iOS, Android
-  - Cordova
-- Desktop
-  - NW.js
-
--- centered
-
-## Server Side Rendering
-
-<img src="img/ssr.png" style="width: 80%;" alt="donejs init" />
-
---
-
-## Real-time
-
-> npm install steal-socket.io --save
-
-```javascript
-import io from 'steal-socket.io';
-
-const socket = io('http://chat.donejs.com');
-
-socket.on('messages created',
-  message => messageConnection.createInstance(message));
-socket.on('messages updated',
-  message => messageConnection.updateInstance(message));
-socket.on('messages removed',
-  message => messageConnection.destroyInstance(message));
-```
-
---
-
-## Desktop and Mobile Builds
-
-<img src="img/desktop-mobile.gif" style="float: right; margin-top: 1em;margin-right: 5em; width: 45%;" alt="donejs init" />
-
-#### iOS/Android (Cordova)
-
-> donejs add cordova
-
-> donejs build cordova
-
-#### Desktop (nw.js)
-
-> donejs add nw
-
-> donejs build nw
 
 -- presenter
 

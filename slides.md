@@ -17,17 +17,21 @@ style: style.css
 
 <a href="http://web.archive.org/web/20090214090118/http://digg.com/programming/jQuery_-_New_Wave_Javascript"><img src="img/digg-comments.png" style="width: 70%;" alt="Framework Timeline"></a>
 
--- centered
+-- centered images
 
 ## 2000 - 2007: "Web 2.0"
 
 JavaScript helper libraries:
 
-<a href="http://mootools.net/"><img alt="Mootools logo" src="img/mootools.png" style="height: 100px;"></a> <a href="http://prototypejs.org/"><img alt="PrototypeJS logo" src="img/prototype.jpg" style="height: 100px;"></a> <a href="https://script.aculo.us/"><img alt="script.aculo.us logo" src="img/scriptaculous.png" style="height: 100px;"></a>
+[![Mootools](img/mootools.png)](http://mootools.net/)
+[![PrototypeJS](img/prototype.jpg)](http://prototypejs.org/)
+[![script.aculo.us](img/scriptaculous.png)](https://script.aculo.us/)
 
 Widget libraries:
 
-<a href="http://yuilibrary.com/"><img alt="YUI logo" src="img/yui.png" style="height: 100px;"></a> <a href="https://www.sencha.com/products/extjs/"><img alt="ExtJS logo" src="img/extjs.jpg" style="height: 100px;"></a> <a href="https://dojotoolkit.org/"><img alt="Dojo toolkit logo" src="img/dojo.png" style="height: 100px;"></a>
+[![YUI](img/yui.png)](http://yuilibrary.com/)
+[![ExtJS](img/extjs.jpg)](https://www.sencha.com/products/extjs/)
+[![Dojo](img/dojo.png)](https://dojotoolkit.org/)
 
 -- centered
 
@@ -35,88 +39,120 @@ Widget libraries:
 
 <img src="img/framework-timeline.png" style="width: 70%;" alt="Framework Timeline">
 
--- centered
+-- centered images
 
-# What did we learn?
+# ![DoneJS](img/donejs-logo-white.svg)
+
+[![CanJS](img/can.png)](https://canjs.com/)
+[![StealJS](img/steal.png)](https://stealjs.com/)
+[![FuncUnit](img/funcunit.png)](https://funcunit.com/)
+[![DocumentJS](img/docjs.png)](https://funcunit.com/)
+[![Testee](img/testee.png)](https://github.com/bitovi/testee)
+
+-- color blue hero
+
+## Did we learn anything?
+
+- The good and bad of owning the stack
+- Long-term backwards compatibility is hard
+- Evolving frameworks eventually turn into a collection of libraries
+- Old ideas don't die
+  - Functional Programming (LISP, 1960s) -> React, RxJS, ImmutableJS
+  - SGML (ISO, 1986) -> HTML5
+  - Flash MXML (Adobe, 2000) -> Angular, Vue.js
+  - EJS (JavaScriptMVC, 2007) -> JSX
 
 --
 
 ## A JavaScript project checklist
 
-## [http://blog.bitovi.com/why-checklist/](http://blog.bitovi.com/why-checklist/)
+A checklist of things we found help guide the development of a JavaScript software project:
 
-* Development
+- The number of steps required for success is too complex for memory
+- Learn from other's experience
+- Force yourself to remember the "not so fun" stuff
+- Guide awkward but important conversations
 
-* Design
+- [bitovi.github.io/checklist](http://bitovi.github.io/checklist/)
 
-* Managment
+-- dark-grey hero centered
 
-### [To the checklist!](http://bitovi.github.io/checklist/)
-
---
-
-## The major surprise in our data was that development factors are not nearly as meaningful in predicting success as design and management factors.
-
---
-
-# A Bitovi Case Study
+## A Bitovi Case Study
 
 After filling out the checklist in hindsight for all of our previous projects, we calculated influence factors and recorded the correlation to project success for each category.
 
-__We defined success as on time and budget__
+<br><br>
+
+#### We defined success as on time and budget
+
+[blog.bitovi.com/why-checklist](http://blog.bitovi.com/why-checklist/)
 
 --
 
+<h2 style="margin: 0 2em;"><em>"The major surprise in our data was that development factors are not nearly as meaningful in predicting success as design and management factors."</em></h2>
+
+--
+
+## Case Study Results
+
 * Development __.20 ~ .28__
   * code reviews
-  * documentation
+  * tests, CI, documentation
 * Design __.44 ~ .45__
   * user testing
   * design documentation
 * Management __.45 ~ .48__
   * vision, goals and strategy
+  * yearly trainings
   * release < 6 months
 
 --
 
-## Old ideas don't die
+# Best practises
 
-- Functional Programming (LISP, 1960s) -> React, RxJS, ImmutableJS
-- SGML (ISO, 1986) -> HTML5
-- Flash MXML (Adobe, 2000) -> Angular, Vue.js
-- GWT (Google, 2006) -> TypeScript
-- EJS (JavaScriptMVC, 2007) -> JSX
-
---
-
-# Design patterns > Frameworks
-
---
+-- centered
 
 ## Modlets
 
---
-
-## Models
-
---
-
-# User Testing w/ [FuncUnit](http://funcunit.com)
-
-<img src="img/funcunit.png"/>
+<h1 style="height: 85%; vertical-align: center;">
+  <img src="img/folders.png" alt="Folders" style="display: inline-block; height: 100%;" />
+  VS
+  <img src="img/modlets.png" alt="Modlets" style="display: inline-block; height: 100%;" />
+</h1>
 
 --
 
-# __FuncUnit__
+## State based routing
 
-Functional testing library built on top of __jQuery__ and runs on __QUnit__, __Jasmine__ or __Mocha__:
+Map parts of the route to application state properties (and vice versa).
+
+```javascript
+const appState = {
+  page: 'home',
+  postId: null
+};
+
+route('/:page');
+route('/:page/:postId', { page: 'posts' });
+
+route.url({ page: 'posts', postId: 10 }); // /posts/10
+route.url({ page: 'user', section: 'account' }); // /user?section=account
+```
+
+--
+
+## Functional testing with FuncUnit
+
+[![FuncUnit](img/funcunit.png)](http://funcunit.com)
+
+A functional testing library built on top of __jQuery__ and runs on __QUnit__, __Jasmine__ or __Mocha__:
 
 - Write functional tests in your testing library of choice
 - Use jQuery syntax to emulate user input
 
 --
 
-# __Testing a [TodoMVC](http://todomvc.com) app__
+## __Testing a [TodoMVC](http://todomvc.com) app__
 
 ```javascript
 test('TodoMVC app', function() {
@@ -129,6 +165,16 @@ test('TodoMVC app', function() {
 });
 ```
 
+Automate it with any test QUnit, Jasmine or Mocha test runner ([example page](http://funcunit.com/site/examples/todo_qunit.html)).
+
+--
+
+## Two more things
+
+--
+
+## Services
+
 -- presenter
 
 ![David Luecke](http://gravatar.com/avatar/a14850281f19396480bdba4aab2d52ef?s=200)
@@ -137,3 +183,5 @@ test('TodoMVC app', function() {
 
 * [<i class="fa fa-github"></i> daffl](https://github.com/daffl)
 * [<i class="fa fa-twitter"></i> @daffl](http://twitter.com/daffl)
+
+[daffl.github.io/seattlejs](https://daffl.github.io/seattlejs)

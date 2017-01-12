@@ -551,7 +551,7 @@ pre {
   color:#fff;
 }
 .slide.color ul {
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
   display: block;
 }
@@ -586,6 +586,11 @@ pre {
 .slide.dark-grey .slide-content {
   background-color: rgba(33, 38, 40, 0.8);
   color: white;
+}
+
+.images img {
+  margin: 20px;
+  height: 100px;
 }
 
 ul {
@@ -635,12 +640,16 @@ h6 {
 <p><a href="http://web.archive.org/web/20090214090118/http://digg.com/programming/jQuery_-_New_Wave_Javascript"><img src="img/digg-comments.png" style="width: 70%;" alt="Framework Timeline"></a></p>
 </section>
   </div>
-  <div class="slide hidden  centered" id="slide-3">
+  <div class="slide hidden  centered images" id="slide-3">
     <section class="slide-content"><h2 id="2000-2007-web-2-0-">2000 - 2007: &quot;Web 2.0&quot;</h2>
 <p>JavaScript helper libraries:</p>
-<p><a href="http://mootools.net/"><img alt="Mootools logo" src="img/mootools.png" style="height: 100px;"></a> <a href="http://prototypejs.org/"><img alt="PrototypeJS logo" src="img/prototype.jpg" style="height: 100px;"></a> <a href="https://script.aculo.us/"><img alt="script.aculo.us logo" src="img/scriptaculous.png" style="height: 100px;"></a></p>
+<p><a href="http://mootools.net/"><img src="img/mootools.png" alt="Mootools"></a>
+<a href="http://prototypejs.org/"><img src="img/prototype.jpg" alt="PrototypeJS"></a>
+<a href="https://script.aculo.us/"><img src="img/scriptaculous.png" alt="script.aculo.us"></a></p>
 <p>Widget libraries:</p>
-<p><a href="http://yuilibrary.com/"><img alt="YUI logo" src="img/yui.png" style="height: 100px;"></a> <a href="https://www.sencha.com/products/extjs/"><img alt="ExtJS logo" src="img/extjs.jpg" style="height: 100px;"></a> <a href="https://dojotoolkit.org/"><img alt="Dojo toolkit logo" src="img/dojo.png" style="height: 100px;"></a></p>
+<p><a href="http://yuilibrary.com/"><img src="img/yui.png" alt="YUI"></a>
+<a href="https://www.sencha.com/products/extjs/"><img src="img/extjs.jpg" alt="ExtJS"></a>
+<a href="https://dojotoolkit.org/"><img src="img/dojo.png" alt="Dojo"></a></p>
 </section>
   </div>
   <div class="slide hidden  centered" id="slide-4">
@@ -648,39 +657,62 @@ h6 {
 <p><img src="img/framework-timeline.png" style="width: 70%;" alt="Framework Timeline"></p>
 </section>
   </div>
-  <div class="slide hidden  centered" id="slide-5">
-    <section class="slide-content"><h1 id="what-did-we-learn-">What did we learn?</h1>
+  <div class="slide hidden  centered images" id="slide-5">
+    <section class="slide-content"><h1 id="-donejs-img-donejs-logo-white-svg-"><img src="img/donejs-logo-white.svg" alt="DoneJS"></h1>
+<p><a href="https://canjs.com/"><img src="img/can.png" alt="CanJS"></a>
+<a href="https://stealjs.com/"><img src="img/steal.png" alt="StealJS"></a>
+<a href="https://funcunit.com/"><img src="img/funcunit.png" alt="FuncUnit"></a>
+<a href="https://funcunit.com/"><img src="img/docjs.png" alt="DocumentJS"></a>
+<a href="https://github.com/bitovi/testee"><img src="img/testee.png" alt="Testee"></a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-6">
-    <section class="slide-content"><h2 id="a-javascript-project-checklist">A JavaScript project checklist</h2>
-<h2 id="-http-blog-bitovi-com-why-checklist-http-blog-bitovi-com-why-checklist-"><a href="http://blog.bitovi.com/why-checklist/"><a href="http://blog.bitovi.com/why-checklist/">http://blog.bitovi.com/why-checklist/</a></a></h2>
+  <div class="slide hidden  color blue hero" id="slide-6">
+    <section class="slide-content"><h2 id="did-we-learn-anything-">Did we learn anything?</h2>
 <ul>
-<li><p>Development</p>
-</li>
-<li><p>Design</p>
-</li>
-<li><p>Managment</p>
+<li>The good and bad of owning the stack</li>
+<li>Long-term backwards compatibility is hard</li>
+<li>Evolving frameworks eventually turn into a collection of libraries</li>
+<li>Old ideas don&#39;t die<ul>
+<li>Functional Programming (LISP, 1960s) -&gt; React, RxJS, ImmutableJS</li>
+<li>SGML (ISO, 1986) -&gt; HTML5</li>
+<li>Flash MXML (Adobe, 2000) -&gt; Angular, Vue.js</li>
+<li>EJS (JavaScriptMVC, 2007) -&gt; JSX</li>
+</ul>
 </li>
 </ul>
-<h3 id="-to-the-checklist-http-bitovi-github-io-checklist-"><a href="http://bitovi.github.io/checklist/">To the checklist!</a></h3>
 </section>
   </div>
   <div class="slide hidden" id="slide-7">
-    <section class="slide-content"><h2 id="the-major-surprise-in-our-data-was-that-development-factors-are-not-nearly-as-meaningful-in-predicting-success-as-design-and-management-factors-">The major surprise in our data was that development factors are not nearly as meaningful in predicting success as design and management factors.</h2>
+    <section class="slide-content"><h2 id="a-javascript-project-checklist">A JavaScript project checklist</h2>
+<p>A checklist of things we found help guide the development of a JavaScript software project:</p>
+<ul>
+<li>The number of steps required for success is too complex for memory</li>
+<li>Learn from other&#39;s experience</li>
+<li>Force yourself to remember the &quot;not so fun&quot; stuff</li>
+<li><p>Guide awkward but important conversations</p>
+</li>
+<li><p><a href="http://bitovi.github.io/checklist/">bitovi.github.io/checklist</a></p>
+</li>
+</ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
-    <section class="slide-content"><h1 id="a-bitovi-case-study">A Bitovi Case Study</h1>
+  <div class="slide hidden  dark-grey hero centered" id="slide-8">
+    <section class="slide-content"><h2 id="a-bitovi-case-study">A Bitovi Case Study</h2>
 <p>After filling out the checklist in hindsight for all of our previous projects, we calculated influence factors and recorded the correlation to project success for each category.</p>
-<p><strong>We defined success as on time and budget</strong></p>
+<p><br><br></p>
+<h4 id="we-defined-success-as-on-time-and-budget">We defined success as on time and budget</h4>
+<p><a href="http://blog.bitovi.com/why-checklist/">blog.bitovi.com/why-checklist</a></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-9">
-    <section class="slide-content"><ul>
+    <section class="slide-content"><h2 style="margin: 0 2em;"><em>&quot;The major surprise in our data was that development factors are not nearly as meaningful in predicting success as design and management factors.&quot;</em></h2></section>
+  </div>
+  <div class="slide hidden" id="slide-10">
+    <section class="slide-content"><h2 id="case-study-results">Case Study Results</h2>
+<ul>
 <li>Development <strong>.20 ~ .28</strong><ul>
 <li>code reviews</li>
-<li>documentation</li>
+<li>tests, CI, documentation</li>
 </ul>
 </li>
 <li>Design <strong>.44 ~ .45</strong><ul>
@@ -690,51 +722,52 @@ h6 {
 </li>
 <li>Management <strong>.45 ~ .48</strong><ul>
 <li>vision, goals and strategy</li>
+<li>yearly trainings</li>
 <li>release &lt; 6 months</li>
 </ul>
 </li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
-    <section class="slide-content"><h2 id="old-ideas-don-t-die">Old ideas don&#39;t die</h2>
-<ul>
-<li>Functional Programming (LISP, 1960s) -&gt; React, RxJS, ImmutableJS</li>
-<li>SGML (ISO, 1986) -&gt; HTML5</li>
-<li>Flash MXML (Adobe, 2000) -&gt; Angular, Vue.js</li>
-<li>GWT (Google, 2006) -&gt; TypeScript</li>
-<li>EJS (JavaScriptMVC, 2007) -&gt; JSX</li>
-</ul>
-</section>
-  </div>
   <div class="slide hidden" id="slide-11">
-    <section class="slide-content"><h1 id="design-patterns-frameworks">Design patterns &gt; Frameworks</h1>
+    <section class="slide-content"><h1 id="best-practises">Best practises</h1>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden  centered" id="slide-12">
     <section class="slide-content"><h2 id="modlets">Modlets</h2>
-</section>
+<h1 style="height: 85%; vertical-align: center;">
+  <img src="img/folders.png" alt="Folders" style="display: inline-block; height: 100%;" />
+  VS
+  <img src="img/modlets.png" alt="Modlets" style="display: inline-block; height: 100%;" />
+</h1></section>
   </div>
   <div class="slide hidden" id="slide-13">
-    <section class="slide-content"><h2 id="models">Models</h2>
+    <section class="slide-content"><h2 id="state-based-routing">State based routing</h2>
+<p>Map parts of the route to application state properties (and vice versa).</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> appState = {
+  page: <span class="hljs-string">'home'</span>,
+  postId: <span class="hljs-literal">null</span>
+};
+
+route(<span class="hljs-string">'/:page'</span>);
+route(<span class="hljs-string">'/:page/:postId'</span>, { page: <span class="hljs-string">'posts'</span> });
+
+route.url({ page: <span class="hljs-string">'posts'</span>, postId: <span class="hljs-number">10</span> }); <span class="hljs-comment">// /posts/10</span>
+route.url({ page: <span class="hljs-string">'user'</span>, section: <span class="hljs-string">'account'</span> }); <span class="hljs-comment">// /user?section=account</span></code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-14">
-    <section class="slide-content"><h1 id="user-testing-w-funcunit-http-funcunit-com-">User Testing w/ <a href="http://funcunit.com">FuncUnit</a></h1>
-<p><img src="img/funcunit.png"/></p>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-15">
-    <section class="slide-content"><h1 id="__funcunit__"><strong>FuncUnit</strong></h1>
-<p>Functional testing library built on top of <strong>jQuery</strong> and runs on <strong>QUnit</strong>, <strong>Jasmine</strong> or <strong>Mocha</strong>:</p>
+    <section class="slide-content"><h2 id="functional-testing-with-funcunit">Functional testing with FuncUnit</h2>
+<p><a href="http://funcunit.com"><img src="img/funcunit.png" alt="FuncUnit"></a></p>
+<p>A functional testing library built on top of <strong>jQuery</strong> and runs on <strong>QUnit</strong>, <strong>Jasmine</strong> or <strong>Mocha</strong>:</p>
 <ul>
 <li>Write functional tests in your testing library of choice</li>
 <li>Use jQuery syntax to emulate user input</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
-    <section class="slide-content"><h1 id="__testing-a-todomvc-http-todomvc-com-app__"><strong>Testing a <a href="http://todomvc.com">TodoMVC</a> app</strong></h1>
+  <div class="slide hidden" id="slide-15">
+    <section class="slide-content"><h2 id="__testing-a-todomvc-http-todomvc-com-app__"><strong>Testing a <a href="http://todomvc.com">TodoMVC</a> app</strong></h2>
 <pre><code class="lang-javascript">test(<span class="hljs-string">'TodoMVC app'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   F(<span class="hljs-string">'#new-todo'</span>).click().type(<span class="hljs-string">'Do some nerdy stuff\r'</span>);
   F(<span class="hljs-string">'#todo-list li'</span>).size(<span class="hljs-number">1</span>, <span class="hljs-string">'Got one Todo'</span>);
@@ -743,15 +776,25 @@ h6 {
   F(<span class="hljs-string">'#todo-count'</span>).html(<span class="hljs-regexp">/&lt;strong&gt;1&lt;\/strong&gt;(.*)item(.*)left/</span>,
     <span class="hljs-string">'Todo count text is correct'</span>);
 });</code></pre>
+<p>Automate it with any test QUnit, Jasmine or Mocha test runner (<a href="http://funcunit.com/site/examples/todo_qunit.html">example page</a>).</p>
 </section>
   </div>
-  <div class="slide hidden  presenter" id="slide-17">
+  <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h2 id="two-more-things">Two more things</h2>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
+    <section class="slide-content"><h2 id="services">Services</h2>
+</section>
+  </div>
+  <div class="slide hidden  presenter" id="slide-18">
     <section class="slide-content"><p><img src="http://gravatar.com/avatar/a14850281f19396480bdba4aab2d52ef?s=200" alt="David Luecke"></p>
 <h2 id="david-luecke">David Luecke</h2>
 <ul>
 <li><a href="https://github.com/daffl"><i class="fa fa-github"></i> daffl</a></li>
 <li><a href="http://twitter.com/daffl"><i class="fa fa-twitter"></i> @daffl</a></li>
 </ul>
+<p><a href="https://daffl.github.io/seattlejs">daffl.github.io/seattlejs</a></p>
 </section>
   </div>
 

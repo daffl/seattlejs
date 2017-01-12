@@ -192,7 +192,7 @@ pre {
   color:#fff;
 }
 .slide.color ul {
-  width: 60%;
+  width: 75%;
   margin: 0 auto;
   display: block;
 }
@@ -227,6 +227,11 @@ pre {
 .slide.dark-grey .slide-content {
   background-color: rgba(33, 38, 40, 0.8);
   color: white;
+}
+
+.images img {
+  margin: 20px;
+  height: 100px;
 }
 
 ul {
